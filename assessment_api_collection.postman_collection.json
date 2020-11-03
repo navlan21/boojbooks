@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "e2fcccf7-6ef1-4047-8473-83b15aa088cb",
+		"name": "assessment_api_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a single post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/posts/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Clean Code v2",
+							"type": "text"
+						},
+						{
+							"key": "Author",
+							"value": "John Cash",
+							"type": "text"
+						},
+						{
+							"key": "ISBN",
+							"value": "CD5555",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "How to improve your coding skill",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/posts?title=Javascript for Beginner&Author=John Rayan&ISBN=CDS2134&Description=Javascript fom A to Z",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Javascript for Beginner"
+						},
+						{
+							"key": "Author",
+							"value": "John Rayan"
+						},
+						{
+							"key": "ISBN",
+							"value": "CDS2134"
+						},
+						{
+							"key": "Description",
+							"value": "Javascript fom A to Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Clean Code",
+							"type": "text"
+						},
+						{
+							"key": "Author",
+							"value": "John Cash",
+							"type": "text"
+						},
+						{
+							"key": "ISBN",
+							"value": "CDS2323",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "How to improve your coding skill",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/posts/55?title=New title",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"55"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "New title"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Clean Code",
+							"type": "text"
+						},
+						{
+							"key": "Author",
+							"value": "John Cash",
+							"type": "text"
+						},
+						{
+							"key": "ISBN",
+							"value": "CDS2323",
+							"type": "text"
+						},
+						{
+							"key": "Description",
+							"value": "How to improve your coding skill",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/posts/40",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"40"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
